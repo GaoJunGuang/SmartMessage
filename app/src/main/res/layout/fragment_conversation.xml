@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ListView
+        android:id="@+id/lv_conversation"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@android:color/transparent"
+        android:listSelector="@android:color/transparent">
+
+    </ListView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <LinearLayout
+            android:id="@+id/ll_conversation_edit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_conversion_menu"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bt_conversation_edit"
+                style="@style/style_conversation_bt_bottom"
+                android:layout_weight="1"
+                android:text="@string/conversation_edit" />
+
+            <Button
+                android:id="@+id/bt_conversation_create"
+                style="@style/style_conversation_bt_bottom"
+                android:layout_weight="1"
+                android:text="@string/conversation_create" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_conversation_select"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_conversion_menu"
+            android:gravity="center_vertical"
+            android:translationY="60dp">
+
+            <Button
+                android:id="@+id/bt_conversation_select_all"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_bt_bg"
+                android:paddingTop="4dp"
+                android:text="@string/conversation_select_all" />
+
+            <Button
+                android:id="@+id/bt_conversation_cancel_select"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_bt_bg"
+                android:paddingTop="4dp"
+                android:text="@string/conversation_cancel_select" />
+
+            <Button
+                android:id="@+id/bt_conversation_delete"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_bt_bg"
+                android:paddingTop="4dp"
+                android:text="@string/conversation_delete" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

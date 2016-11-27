@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">智能短信</string>
+    <string name="tab_conversation">会话</string>
+    <string name="tab_group">分组</string>
+    <string name="tab_search">搜索</string>
+    <string name="conversation_edit">编辑</string>
+    <string name="conversation_create">新建短信</string>
+    <string name="conversation_select_all">全选</string>
+    <string name="conversation_cancel_select">退出选择</string>
+    <string name="conversation_delete">刪除</string>
+    <string name="conversation_create_group">创建分组</string>
+    <string name="conversation_detail_send">发送</string>
+    <string name="msg_send">发送</string>
+    <string name="msg_clear">清空</string>
+</resources>
