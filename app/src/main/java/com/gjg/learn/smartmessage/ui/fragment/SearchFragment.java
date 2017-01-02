@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
@@ -21,6 +22,7 @@ import com.gjg.learn.smartmessage.base.BaseFragment;
 import com.gjg.learn.smartmessage.bean.Conversation;
 import com.gjg.learn.smartmessage.dao.SimpleQueryHandler;
 import com.gjg.learn.smartmessage.ui.activity.ConversationDetailActivity;
+import com.gjg.learn.smartmessage.ui.activity.NewMsgActivity;
 import com.gjg.learn.smartmessage.util.Constant;
 
 /**
@@ -29,6 +31,7 @@ import com.gjg.learn.smartmessage.util.Constant;
 public class SearchFragment extends BaseFragment {
     private EditText et_search_list;
     private ListView lv_search_list;
+    private FloatingActionButton fab_create;
     private ConversationListAdapter adapter;
     private SimpleQueryHandler queryHandler;
     String[] projection = {
@@ -111,10 +114,17 @@ public class SearchFragment extends BaseFragment {
 
             }
         });
+
+        fab_create.setOnClickListener(this);
     }
 
     @Override
     public void handleClick(View view) {
-
+        switch (view.getId()){
+            case R.id.fab_create:
+                Intent intent = new Intent(getActivity(), NewMsgActivity.class);
+                startActivity(intent);
+                break;
+        }
     }
 }
